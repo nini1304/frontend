@@ -1,0 +1,91 @@
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-left: 6px solid #7C4585;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(61, 54, 92, 0.1);
+  margin-bottom: 16px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  color: #F8B55F;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.status {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.status.pendiente {
+  background-color: #F8B55F;
+}
+
+.status.enprogreso {
+  background-color: #7C4585;
+}
+
+.status.completada {
+  background-color: #3D365C;
+}
+
+.description {
+  margin: 8px 0;
+  color: #444;
+}
+
+.dueDate {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit,
+.delete {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.edit {
+  background-color: #C95792;
+  color: #fff;
+}
+
+.edit:hover {
+  background-color: #b74e84;
+}
+
+.delete {
+  background-color: #eee;
+  color: #C95792;
+}
+
+.delete:hover {
+  background-color: #f8e1ec;
+}
