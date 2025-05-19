@@ -5,7 +5,7 @@ export default function TaskCard({ task, onDelete, onEdit }) {
     <div className={styles.card}>
       <div className={styles.header}>
         <h3 className={styles.title}>{task.title}</h3>
-        <span className={`${styles.status} ${styles[task.status.toLowerCase()]}`}>
+        <span className={`${styles.status} ${styles[task.status.toLowerCase().replace(/\s/g, '')]}`}>
           {task.status}
         </span>
       </div>
