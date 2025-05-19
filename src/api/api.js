@@ -1,9 +1,10 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://localhost:3000/api', // cambia en prod si es necesario
+    baseURL: import.meta.env.VITE_API_URL || 'http://localhost:3000/api',
 });
 
+// Funciones
 export const loginUser = async (email, password) =>
     api.post('/auth/login', { email, contraseña: password });
 
