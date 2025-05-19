@@ -88,3 +88,27 @@ body {
 .form button:hover {
   background-color: #e8a94d;
 }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logoutButton {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 20%;
+  margin-bottom: 16px;
+  margin-left: auto;
+}
+
+.logoutButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}

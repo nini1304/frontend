@@ -6,10 +6,12 @@ import { useAuth } from '../context/AuthContext';
 import TaskList from '../components/TaskList';
 import EditTaskModal from '../components/EditTaskModal';
 import styles from './Dashboard.module.css';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Dashboard() {
-    const { token } = useAuth();
+    const { token, logout } = useAuth();
+    const navigate = useNavigate();
     const [tasks, setTasks] = useState([]);
     const [newTask, setNewTask] = useState({
         title: '',
@@ -73,6 +75,12 @@ export default function Dashboard() {
     return (
         <div className={styles.container}>
             <h2 className={styles.heading}>Dashboard</h2>
+            <button className={styles.logoutButton} onClick={() => {
+                logout();
+                navigate('/');
+            }}>
+                Cerrar sesión
+            </button>
 
             <div className={styles.filters}>
                 <input
